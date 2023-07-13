@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const commandeSchema = new mongoose.Schema(
+const orderSchema = new mongoose.Schema(
     {
         address: {
             type: String,
@@ -14,15 +14,11 @@ const commandeSchema = new mongoose.Schema(
         totalPrice: {
             type: Number,
             required: true
-        },
-        address: {
-            type: String,
-            required: true
         }
 
     }
 )
 
-const Commande = mongoose.model("commandes", commandeSchema)
+const Order = mongoose.model("orders", orderSchema)
 
-module.exports = Commande
+module.exports = Order
